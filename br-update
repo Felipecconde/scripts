@@ -1,0 +1,2 @@
+#!/bin/bash
+sudo apt -y install git && rm -rf $HOME/Downloads/br && git clone https://github.com/Felipecconde/br $HOME/Downloads/br && sudo chmod +x $HOME/Downloads/br/br/br-installer.sh && bash $HOME/Downloads/br/br/br-installer.sh && rm -rf $HOME/Downloads/br
