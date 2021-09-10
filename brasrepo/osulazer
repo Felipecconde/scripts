@@ -1,11 +1,11 @@
-# --------- Information --------- #
+# --------- Information -----------
 VER=$(curl --silent "https://api.github.com/repos/ppy/osu/releases/latest" | grep -Po '"tag_name": "\K.*?(?=")')
 echo "[!] To acess the main page of BRAppStore, execute 'br appstore', and you will have acess to so many games, applications and scripts!"
 echo
 echo "[BRAPPSTORE] 🛒️ Package: 'osu"'!'"lazer' | Version: '$VER'"
 echo
 echo "[INFO] This installation script will install 'osu"'!'"lazer' package and will add an automatic update system for it.
-# ############################### #
+# ---------------------------------
 
 
 
@@ -14,7 +14,7 @@ echo "[ROOT] #️⃣  BRAppStore is requesting ROOT access permission."
 echo
 sudo sleep 0
 echo
-mkdir $HOME/.brappstore
+mkdir $HOME/.brappstore > /dev/null 2>&1
 read -r -p "[OPTION] ❓️ Do you want to install (update) or uninstall the package? (I/u) " input
 case $input in
     [iI]|[iI])
@@ -22,13 +22,13 @@ echo
 
 
 
-# --------- Information --------- #
+# --------- Information -----------
 echo '[INSTALL] BRAppStore: ⬇️  Installing package "osu'"!"'lazer"... Please wait and follow any instructions that may possibly appear here during process.'
-# ############################### #
+# ---------------------------------
 
 
 
-# ----------- Install ----------- #
+# ----------- Install -------------
 sudo rm /usr/bin/osu.AppImage > /dev/null 2>&1
 sudo wget -O /usr/bin/osu.AppImage https://github.com/ppy/osu/releases/download/$VER/osu.AppImage > /dev/null 2>&1
 sudo chmod +x /usr/bin/osu.AppImage > /dev/null 2>&1
@@ -51,7 +51,7 @@ update-desktop-database > /dev/null 2>&1
 rm $HOME/.config/autostart/osu'!'lazer.sh > /dev/null 2>&1
 br -vu https://raw.githubusercontent.com/Felipecconde/scripts/main/brasrepo/osulazer-autoupdate > $HOME/.config/autostart/osu'!'lazer.sh
 chmod +x $HOME/.config/autostart/osu'!'lazer.sh > /dev/null 2>&1
-# ############################### #
+# ---------------------------------
 
 
 
@@ -60,9 +60,9 @@ echo
 
 
 
-# --------- Information --------- #
+# --------- Information -----------
 echo '[INSTALL] ❌️ BRAppStore: Error! Package "osu'"!"'lazer" not installed'"!"''
-# ############################### #
+# ---------------------------------
 
 
 
@@ -71,9 +71,9 @@ echo
 
 
 
-# --------- Information --------- #
+# --------- Information -----------
 echo '[INSTALL] ✅️ BRAppStore: Package "osu'"!"'lazer" successfully installed'"!"''
-# ############################### #
+# ---------------------------------
 
 
 
@@ -84,19 +84,19 @@ echo
 
 
 
-# --------- Information --------- #
+# --------- Information -----------
 echo '[UNINSTALL] 🗑️  BRAppStore: Uninstalling package "osu'"!"'lazer"... Please wait and follow any instructions that may possibly appear here during process.'
-# ############################### #
+# ---------------------------------
 
 
 
-# ---------- Uninstall ---------- #
+# ---------- Uninstall ------------
 sudo rm /usr/bin/osu.AppImage > /dev/null 2>&1
 sudo rm /usr/share/pixmaps/osu'!'lazer.png > /dev/null 2>&1
 sudo rm $HOME/.local/share/applications/osu'!'lazer.desktop > /dev/null 2>&1
 update-desktop-database > /dev/null 2>&1
 rm $HOME/.config/autostart/osu'!'lazer.sh > /dev/null 2>&1
-# ############################### #
+# ---------------------------------
 
 
 
@@ -105,9 +105,9 @@ echo
 
 
 
-# --------- Information --------- #
+# --------- Information -----------
 echo '[UNINSTALL] 🗑️  BRAppStore: Package "osu'"!"'lazer" successfully uninstalled!'
-# ############################### #
+# ---------------------------------
 
 
 
@@ -117,9 +117,9 @@ echo
 
 
 
-# --------- Information --------- #
+# --------- Information -----------
 echo '[UNINSTALL] ❌️ BRAppStore: Error! Package "osu'"!"'lazer" not uninstalled!'
-# ############################### #
+# ---------------------------------
 
 
 
