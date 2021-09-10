@@ -1,1 +1,36 @@
-echo "BRAppStore: COMING SOON!"
+VER=$(curl --silent "https://api.github.com/repos/ppy/osu/releases/latest" | grep -Po '"tag_name": "\K.*?(?=")')
+echo "[INFO] Package: 'osu"'!'"lazer' | Version: '$VER'"
+echo
+echo '[ROOT] BRAppStore is requesting ROOT access permission."
+sudo sleep 0
+echo
+read -r -p "[OPTION] Do you want to install or uninstall the package? (I/u) " input
+case $input in
+    [iI]|[iI])
+echo '[INSTALL] BRAppStore: Managing package "osu!lazer"... Please wait and follow any instructions that may possibly appear here during installation.'
+VER=$(curl --silent "https://api.github.com/repos/ppy/osu/releases/latest" | grep -Po '"tag_name": "\K.*?(?=")')
+sudo rm /usr/bin/osu.AppImage
+sudo wget -O /usr/bin/osu.AppImage https://github.com/ppy/osu/releases/download/$VER/osu.AppImage
+sudo chmod +x /usr/bin/osu.AppImage
+sudo rm /usr/share/pixmaps/osu'!'lazer.png
+sudo wget -O /usr/share/pixmaps/osu'!'lazer.png https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Osu%21Logo_%282015%29.svg/800px-Osu%21Logo_%282015%29.svg.png
+sudo rm $HOME/.local/share/applications/osu'!'lazer.desktop
+cat > $HOME/.local/share/applications/osu'!'lazer.desktop <<EOF
+[Desktop Entry]
+Type=Application
+Name=osu!
+Icon=/usr/share/pixmaps/osu!lazer.png
+Exec=/usr/bin/osu.AppImage
+Categories=Game;
+EOF
+chmod +x $HOME/.local/share/applications/osu'!'lazer.desktop
+echo '[INSTALL] BRAppStore: Package "osu!lazer" successfully installed!'
+;;
+[uU]|[uU])
+		echo "Uninstall (Cooming soon)"
+       		;;
+          *)
+	echo "[ERROR] Invalid input"'!'
+	exit 1
+	;;
+esac
