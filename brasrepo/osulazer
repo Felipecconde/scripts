@@ -5,7 +5,7 @@ echo
 echo "[BRAPPSTORE] 🛒️ Package: 'osu"'!'"lazer' | Version: '$VER'"
 echo
 echo "[INFO] This installation script will install 'osu"'!'"lazer' package and will add an automatic update system for it.
-###################################
+# ############################### #
 
 
 
@@ -24,7 +24,7 @@ echo
 
 # --------- Information --------- #
 echo '[INSTALL] BRAppStore: ⬇️  Installing package "osu'"!"'lazer"... Please wait and follow any instructions that may possibly appear here during process.'
-###################################
+# ############################### #
 
 
 
@@ -51,7 +51,7 @@ update-desktop-database > /dev/null 2>&1
 rm $HOME/.config/autostart/osu'!'lazer.sh > /dev/null 2>&1
 br -vu https://raw.githubusercontent.com/Felipecconde/scripts/main/brasrepo/osulazer-autoupdate > $HOME/.config/autostart/osu'!'lazer.sh
 chmod +x $HOME/.config/autostart/osu'!'lazer.sh > /dev/null 2>&1
-###################################
+# ############################### #
 
 
 
@@ -62,7 +62,7 @@ echo
 
 # --------- Information --------- #
 echo '[INSTALL] ❌️ BRAppStore: Error! Package "osu'"!"'lazer" not installed'"!"''
-###################################
+# ############################### #
 
 
 
@@ -73,7 +73,7 @@ echo
 
 # --------- Information --------- #
 echo '[INSTALL] ✅️ BRAppStore: Package "osu'"!"'lazer" successfully installed'"!"''
-###################################
+# ############################### #
 
 
 
@@ -86,7 +86,7 @@ echo
 
 # --------- Information --------- #
 echo '[UNINSTALL] 🗑️  BRAppStore: Uninstalling package "osu'"!"'lazer"... Please wait and follow any instructions that may possibly appear here during process.'
-###################################
+# ############################### #
 
 
 
@@ -96,7 +96,7 @@ sudo rm /usr/share/pixmaps/osu'!'lazer.png > /dev/null 2>&1
 sudo rm $HOME/.local/share/applications/osu'!'lazer.desktop > /dev/null 2>&1
 update-desktop-database > /dev/null 2>&1
 rm $HOME/.config/autostart/osu'!'lazer.sh > /dev/null 2>&1
-###################################
+# ############################### #
 
 
 
@@ -107,7 +107,7 @@ echo
 
 # --------- Information --------- #
 echo '[UNINSTALL] 🗑️  BRAppStore: Package "osu'"!"'lazer" successfully uninstalled!'
-###################################
+# ############################### #
 
 
 
@@ -119,7 +119,7 @@ echo
 
 # --------- Information --------- #
 echo '[UNINSTALL] ❌️ BRAppStore: Error! Package "osu'"!"'lazer" not uninstalled!'
-###################################
+# ############################### #
 
 
 
