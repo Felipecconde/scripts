@@ -1,7 +1,7 @@
 VER=$(curl --silent "https://api.github.com/repos/ppy/osu/releases/latest" | grep -Po '"tag_name": "\K.*?(?=")')
 echo "[INFO] Package: 'osu"'!'"lazer' | Version: '$VER'"
 echo
-echo '[ROOT] BRAppStore is requesting ROOT access permission."
+echo "[ROOT] BRAppStore is requesting ROOT access permission."
 sudo sleep 0
 echo
 read -r -p "[OPTION] Do you want to install or uninstall the package? (I/u) " input
@@ -33,3 +33,4 @@ echo '[INSTALL] BRAppStore: Package "osu!lazer" successfully installed!'
 	exit 1
 	;;
 esac
+exit
