@@ -1,3 +1,4 @@
+#!/bin/bash
 # --------- Information -----------
 VER=$(curl --silent "https://api.github.com/repos/ppy/osu/releases/latest" | grep -Po '"tag_name": "\K.*?(?=")')
 echo "[!] To acess the main page of BRAppStore, execute 'br appstore', and you will have acess to so many games, applications and scripts!"
