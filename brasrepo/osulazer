@@ -8,7 +8,6 @@ read -r -p "[OPTION] Do you want to install or uninstall the package? (I/u) " in
 case $input in
     [iI]|[iI])
 echo '[INSTALL] BRAppStore: Managing package "osu!lazer"... Please wait and follow any instructions that may possibly appear here during installation.'
-VER=$(curl --silent "https://api.github.com/repos/ppy/osu/releases/latest" | grep -Po '"tag_name": "\K.*?(?=")')
 sudo rm /usr/bin/osu.AppImage
 sudo wget -O /usr/bin/osu.AppImage https://github.com/ppy/osu/releases/download/$VER/osu.AppImage
 sudo chmod +x /usr/bin/osu.AppImage
