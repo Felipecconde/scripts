@@ -5,7 +5,7 @@ echo "[!] To acess the main page of BRAppStore, execute 'br appstore', and you w
 echo
 echo "[BRAPPSTORE] 🛒️ Package: 'osu"'!'"lazer' | Version: '$VER'"
 echo
-echo "[INFO] This installation script will install 'osu"'!'"lazer' package and will add an automatic update system for it.
+echo "[INFO] This installation script will install 'osu"'!'"lazer' package and will add an automatic update system for it."
 # ---------------------------------
 
 
