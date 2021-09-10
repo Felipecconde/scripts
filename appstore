@@ -10,11 +10,11 @@ echo
 echo "=== 📰️ NEWS ==="
 echo "Nothing here, sorry :("
 echo
-echo "=== 🕒️ COMING SOON ===
+echo "=== 🕒️ COMING SOON ==="
 echo "Name: osu!lazer | Description: osu! installer for Linux | Category: Game | Command: br osulazer"
 echo "Name: Genshin Impact | Description: Genshin Impact installer for Linux | Category: Game | Command: br genshinimpact"
 echo
 echo "=== ⬇️ ACCESS FULL REPOSITORY ==="
 echo "To list the full BRAppStore repository, use the 'br repoappstore' command. We recommend the usage of 'grep' command to filter/search on the repository."
 echo
-echo "x--------------------------X"
+echo "x--------------------------x"
