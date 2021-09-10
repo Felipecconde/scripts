@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "/!\ Leia, falante de português (Em inglês); Léelo, hispanohablante (Em inglês): Portuguese and Spanish languages are not available for organizational reasons. Sorry about it :("
+echo "⚠️ 🇵🇹 Leia, falante de português (Em inglês); 🇪🇸️ Léelo, hispanohablante (Em inglês): Portuguese and Spanish languages are not available for organizational reasons. Sorry about it :("
 echo
 echo "x----- 🛒️ BRAppStore 🛍️ -----x"
 echo
@@ -15,6 +15,6 @@ echo "Name: osu!lazer | Description: osu! installer for Linux | Category: Game |
 echo "Name: Genshin Impact | Description: Genshin Impact installer for Linux | Category: Game | Command: br genshinimpact"
 echo
 echo "=== ⬇️ ACCESS FULL REPOSITORY ==="
-echo "To list the full BRAppStore repository, use 'br repoappstore' command. We recommend the usage of 'grep' command to filter/search on the repository."
+echo "To list the full BRAppStore repository, use the 'br repoappstore' command. We recommend the usage of 'grep' command to filter/search on the repository."
 echo
 echo "x--------------------------X"
