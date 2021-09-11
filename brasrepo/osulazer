@@ -25,6 +25,7 @@ echo
 
 # --------- Information -----------
 echo '[INSTALL] BRAppStore: ⬇️  Installing package "osu'"!"'lazer"... Please wait and follow any instructions that may possibly appear here during process.'
+echo
 # ---------------------------------
 
 
@@ -87,6 +88,7 @@ echo
 
 # --------- Information -----------
 echo '[UNINSTALL] 🗑️  BRAppStore: Uninstalling package "osu'"!"'lazer"... Please wait and follow any instructions that may possibly appear here during process.'
+echo
 # ---------------------------------
 
 
