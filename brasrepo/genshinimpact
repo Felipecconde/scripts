@@ -1,1 +1,133 @@
-echo "BRAppStore: Coming soon!"
+#!/bin/bash
+echo "WIP - DONT USE THIS!"
+# --------- Information -----------
+VER=$(curl --silent "https://api.github.com/repos/ppy/osu/releases/latest" | grep -Po '"tag_name": "\K.*?(?=")')
+echo "[!] To acess the main page of BRAppStore, execute 'br appstore', and you will have acess to so many games, applications and scripts!"
+echo
+echo "[BRAPPSTORE] 🛒️ Package: 'Paimon Launcher' | Version: '$VER'"
+echo
+echo "[INFO] This installation script will install loentar's 'Paimon Launcher' package (Launcher for Genshin Impact that applies the Krock's patch that allows it running by bypassing the Genshin Impact anti-cheat detection for Linux). Be careful, you can be banned from Genshin Impact by using it if MiHoYo was able to detect it, especially if you try to play a Genshin update without waiting for a new Krock's patch and applying it. Be extremely careful and avoid sharing this."
+# ---------------------------------
+
+
+
+echo
+echo "[ROOT] #️⃣  BRAppStore is requesting ROOT access permission."
+echo
+sudo sleep 0
+echo
+mkdir $HOME/.brappstore > /dev/null 2>&1
+read -r -p "[OPTION] ❓️ Do you want to install (update) or uninstall the package? (I/u) " input
+case $input in
+    [iI]|[iI])
+echo
+
+
+
+# --------- Information -----------
+echo '[INSTALL] BRAppStore: ⬇️  Installing package "osu'"!"'lazer"... Please wait and follow any instructions that may possibly appear here during process.'
+echo
+# ---------------------------------
+
+
+
+# ----------- Install -------------
+echo "Step"
+DRIVEID=$(curl https://notabug.org/loentar/paimon-launcher/releases | grep -Po '(?<=href="https://drive.google.com/file/d/)[^/]*' | head -n 1)
+rm $HOME/Downloads/paimon-launcher
+sudo rm /usr/bin/gi-launcher
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=$DRIVEID' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=$DRIVEID" -O paimon-launcher && rm -rf /tmp/cookies.txt
+chmod +x $HOME/Downloads/paimon-launcher
+sudo mv $HOME/Downloads/paimon-launcher /usr/bin/paimon-launcher
+sudo rm /usr/share/pixmaps/paimon-launcher.png
+sudo wget -O /usr/share/pixmaps/paimon-launcher.png https://i.imgur.com/sjOjGPp.png > /dev/null 2>&1
+cat > $HOME/.local/share/applications/paimon-launcher.desktop <<EOF
+[Desktop Entry]
+Type=Application
+Name=Genshin Impact
+Icon=/usr/share/pixmaps/paimon-launcher.png
+Exec=/usr/bin/paimon-launcher.AppImage
+Categories=Game;
+EOF
+# ---------------------------------
+
+
+
+if [ ! -f /usr/bin/osu.AppImage ]; then
+echo
+
+
+
+# --------- Information -----------
+echo '[INSTALL] ❌️ BRAppStore: Error! Package "osu'"!"'lazer" not installed'"!"''
+# ---------------------------------
+
+
+
+else
+echo
+
+
+
+# --------- Information -----------
+echo '[INSTALL] ✅️ BRAppStore: Package "osu'"!"'lazer" successfully installed'"!"''
+# ---------------------------------
+
+
+
+fi
+;;
+[uU]|[uU])
+echo
+
+
+
+# --------- Information -----------
+echo '[UNINSTALL] 🗑️  BRAppStore: Uninstalling package "osu'"!"'lazer"... Please wait and follow any instructions that may possibly appear here during process.'
+# ---------------------------------
+
+
+
+# ---------- Uninstall ------------
+sudo rm /usr/bin/osu.AppImage > /dev/null 2>&1
+sudo rm /usr/share/pixmaps/osu'!'lazer.png > /dev/null 2>&1
+sudo rm $HOME/.local/share/applications/osu'!'lazer.desktop > /dev/null 2>&1
+update-desktop-database > /dev/null 2>&1
+rm $HOME/.config/autostart/osu'!'lazer.sh > /dev/null 2>&1
+# ---------------------------------
+
+
+
+if [ ! -f /usr/bin/osu.AppImage ]; then
+echo
+
+
+
+# --------- Information -----------
+echo '[UNINSTALL] 🗑️  BRAppStore: Package "osu'"!"'lazer" successfully uninstalled!'
+# ---------------------------------
+
+
+
+exit
+else
+echo
+
+
+
+# --------- Information -----------
+echo '[UNINSTALL] ❌️ BRAppStore: Error! Package "osu'"!"'lazer" not uninstalled!'
+# ---------------------------------
+
+
+
+exit
+fi
+       		;;
+          *)
+	echo
+	echo "[OPTION] ❌️ Error"'!'" Invalid input"'!'
+	exit 1
+	;;
+esac
+exit
