@@ -1,12 +1,13 @@
 #!/bin/bash
 echo "WIP - DONT USE THIS!"
 # --------- Information -----------
-VER=$(curl --silent "https://api.github.com/repos/ppy/osu/releases/latest" | grep -Po '"tag_name": "\K.*?(?=")')
+# It took me LITERALLY over ONE HOUR just to be able to detect the latest release version in the line below. Yeah, my friends, regex is a F**KING disgrace. You don't know how happy I am right now that I finally managed to match this with regex. All I want right now is to kill the person who created the regex, LOL.
+VER=$(curl --silent "https://notabug.org/loentar/paimon-launcher/releases" | grep -Po '(?<=i class="tag icon"></i> )[^</a>]*' | head -n 1)
 echo "[!] To acess the main page of BRAppStore, execute 'br appstore', and you will have acess to so many games, applications and scripts!"
 echo
-echo "[BRAPPSTORE] 🛒️ Package: 'Paimon Launcher' | Version: '$VER'"
+echo "[BRAPPSTORE] 🛒️ Package: 'Genshin Impact' | Version: '$VER'"
 echo
-echo "[INFO] This installation script will install loentar's 'Paimon Launcher' package (Launcher for Genshin Impact that applies the Krock's patch that allows it running by bypassing the Genshin Impact anti-cheat detection for Linux). Be careful, you can be banned from Genshin Impact by using it if MiHoYo was able to detect it, especially if you try to play a Genshin update without waiting for a new Krock's patch and applying it. Be extremely careful and avoid sharing this."
+echo "[INFO] This installation script will install loentar's 'Paimon Launcher' package (Launcher for Genshin Impact that applies the Krock's patch that allows it running by bypassing the Genshin Impact anti-cheat detection for Linux). Be careful, you can be banned from Genshin Impact by using it if MiHoYo was able to detect it, especially if you try to play a Genshin update without waiting for and updating to a new Krock's patch and applying it. Be extremely careful, keep Krock's patch always up to date, never play this game without first patching it after a new update and avoid sharing this so this project will be not discovered by MiHoYo (Or else MiHoYo will resist it and will make it impossible to play Genshin Impact on Linux)."
 # ---------------------------------
 
 
@@ -25,14 +26,13 @@ echo
 
 
 # --------- Information -----------
-echo '[INSTALL] BRAppStore: ⬇️  Installing package "osu'"!"'lazer"... Please wait and follow any instructions that may possibly appear here during process.'
+echo '[INSTALL] BRAppStore: ⬇️  Installing package "Genshin Impact"... Please wait and follow any instructions that may possibly appear here during process.'
 echo
 # ---------------------------------
 
 
 
 # ----------- Install -------------
-echo "Step"
 DRIVEID=$(curl https://notabug.org/loentar/paimon-launcher/releases | grep -Po '(?<=href="https://drive.google.com/file/d/)[^/]*' | head -n 1)
 rm $HOME/Downloads/paimon-launcher
 sudo rm /usr/bin/gi-launcher
@@ -59,7 +59,7 @@ echo
 
 
 # --------- Information -----------
-echo '[INSTALL] ❌️ BRAppStore: Error! Package "osu'"!"'lazer" not installed'"!"''
+echo '[INSTALL] ❌️ BRAppStore: Error! Package "Genshin Impact" not installed'"!"''
 # ---------------------------------
 
 
@@ -70,7 +70,7 @@ echo
 
 
 # --------- Information -----------
-echo '[INSTALL] ✅️ BRAppStore: Package "osu'"!"'lazer" successfully installed'"!"''
+echo '[INSTALL] ✅️ BRAppStore: Package "Genshin Impact" successfully installed'"!"''
 # ---------------------------------
 
 
@@ -83,7 +83,7 @@ echo
 
 
 # --------- Information -----------
-echo '[UNINSTALL] 🗑️  BRAppStore: Uninstalling package "osu'"!"'lazer"... Please wait and follow any instructions that may possibly appear here during process.'
+echo '[UNINSTALL] 🗑️  BRAppStore: Uninstalling package "Genshin Impact"... Please wait and follow any instructions that may possibly appear here during process.'
 # ---------------------------------
 
 
@@ -104,7 +104,7 @@ echo
 
 
 # --------- Information -----------
-echo '[UNINSTALL] 🗑️  BRAppStore: Package "osu'"!"'lazer" successfully uninstalled!'
+echo '[UNINSTALL] 🗑️  BRAppStore: Package "Genshin Impact" successfully uninstalled!'
 # ---------------------------------
 
 
@@ -116,7 +116,7 @@ echo
 
 
 # --------- Information -----------
-echo '[UNINSTALL] ❌️ BRAppStore: Error! Package "osu'"!"'lazer" not uninstalled!'
+echo '[UNINSTALL] ❌️ BRAppStore: Error! Package "Genshin Impact" not uninstalled!'
 # ---------------------------------
 
 
