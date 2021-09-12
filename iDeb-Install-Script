@@ -3,10 +3,10 @@ cd $HOME
 sudo apt install git
 rm -rf /home/$USER/Downloads/iDeb
 git clone https://github.com/Felipecconde/iDeb /home/$USER/Downloads/iDeb
-cat $HOME/Downloads/ideb/'Ajuda\Help.txt'
+cat $HOME/Downloads/iDeb/'Ajuda\Help.txt'
 echo
 echo '- [!] Read the message above (Portuguese and English) before installing it. Starting installation in 5 seconds...'
 sleep 5
-cd $HOME/Downloads/ideb/
-bash $HOME/Downloads/ideb/'.install'
+cd $HOME/Downloads/iDeb/
+bash $HOME/Downloads/iDeb/'.install'
 rm -rf /home/$USER/Downloads/iDeb
