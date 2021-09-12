@@ -1,13 +1,12 @@
 # https://github.com/Felipecconde/iDeb
-cd ~
+cd $HOME
 sudo apt install git
-rm -rf /home/$USER/Downloads/iDeb /home/$USER/Downloads/ideb-*
+rm -rf /home/$USER/Downloads/ideb
 git clone https://github.com/Felipecconde/iDeb /home/$USER/Downloads/iDeb
-tar -xf /home/$USER/Downloads/iDeb/ideb-* -C /home/$USER/Downloads/
-rm -rf /home/$USER/Downloads/iDeb
-cat /home/$USER/Downloads/ideb-*/'Ajuda\Help.txt'
+cat $HOME/Downloads/ideb/'Ajuda\Help.txt'
 echo
-echo '- [!] Leia a mensagem de ajuda acima (Português e Inglês) antes de instalar. Prosseguindo para a instalação em 5 segundos...'
+echo '- [!] Read the message above (Portuguese and English) before installing it. Starting installation in 5 seconds...'
 sleep 5
-cd /home/$USER/Downloads/ideb-*/
-sh /home/$USER/Downloads/ideb-*/'.install'
+cd $HOME/Downloads/ideb/
+bash $HOME/Downloads/ideb/'.install'
+rm -rf /home/$USER/Downloads/ideb
