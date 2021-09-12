@@ -1,5 +1,4 @@
 #!/bin/bash
-echo "WIP - DONT USE THIS!"
 # --------- Information -----------
 # It took me LITERALLY over ONE HOUR just to be able to detect the latest release version in the line below. Yeah, my friends, regex is a F**KING disgrace. You don't know how happy I am right now that I finally managed to match this with regex. All I want right now is to kill the person who created the regex, LOL.
 VER=$(curl --silent "https://notabug.org/loentar/paimon-launcher/releases" | grep -Po '(?<=i class="tag icon"></i> )[^</a>]*' | head -n 1)
@@ -33,27 +32,31 @@ echo
 
 
 # ----------- Install -------------
-DRIVEID=$(curl https://notabug.org/loentar/paimon-launcher/releases | grep -Po '(?<=href="https://drive.google.com/file/d/)[^/]*' | head -n 1)
-rm $HOME/Downloads/paimon-launcher
-sudo rm /usr/bin/gi-launcher
-wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=$DRIVEID' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=$DRIVEID" -O paimon-launcher && rm -rf /tmp/cookies.txt
-chmod +x $HOME/Downloads/paimon-launcher
-sudo mv $HOME/Downloads/paimon-launcher /usr/bin/paimon-launcher
-sudo rm /usr/share/pixmaps/paimon-launcher.png
+DRIVEID=$(curl -s https://notabug.org/loentar/paimon-launcher/releases | grep -Po '(?<=href="https://drive.google.com/file/d/)[^/]*' | head -n 1)
+rm $HOME/Downloads/paimon-launcher > /dev/null 2>&1
+sudo rm /usr/bin/paimon-launcher > /dev/null 2>&1
+wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=$DRIVEID' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=$DRIVEID" -O paimon-launcher > /dev/null 2>&1
+rm -rf /tmp/cookies.txt > /dev/null 2>&1
+chmod +x $HOME/Downloads/paimon-launcher > /dev/null 2>&1
+sudo mv $HOME/Downloads/paimon-launcher /usr/bin/paimon-launcher > /dev/null 2>&1
+sudo rm /usr/share/pixmaps/paimon-launcher.png > /dev/null 2>&1
 sudo wget -O /usr/share/pixmaps/paimon-launcher.png https://i.imgur.com/sjOjGPp.png > /dev/null 2>&1
+rm $HOME/.local/share/applications/paimon-launcher.desktop > /dev/null 2>&1
 cat > $HOME/.local/share/applications/paimon-launcher.desktop <<EOF
 [Desktop Entry]
 Type=Application
-Name=Genshin Impact
+Name=Genshin Impact Launcher
 Icon=/usr/share/pixmaps/paimon-launcher.png
-Exec=/usr/bin/paimon-launcher.AppImage
+Exec=/usr/bin/paimon-launcher
 Categories=Game;
 EOF
+chmod +x $HOME/.local/share/applications/paimon-launcher.desktop > /dev/null 2>&1
+update-desktop-database > /dev/null 2>&1
 # ---------------------------------
 
 
 
-if [ ! -f /usr/bin/osu.AppImage ]; then
+if [ ! -f /usr/bin/paimon-launcher ]; then
 echo
 
 
@@ -89,16 +92,15 @@ echo '[UNINSTALL] 🗑️  BRAppStore: Uninstalling package "Genshin Impact"... 
 
 
 # ---------- Uninstall ------------
-sudo rm /usr/bin/osu.AppImage > /dev/null 2>&1
-sudo rm /usr/share/pixmaps/osu'!'lazer.png > /dev/null 2>&1
-sudo rm $HOME/.local/share/applications/osu'!'lazer.desktop > /dev/null 2>&1
-update-desktop-database > /dev/null 2>&1
-rm $HOME/.config/autostart/osu'!'lazer.sh > /dev/null 2>&1
+rm $HOME/Downloads/paimon-launcher > /dev/null 2>&1
+sudo rm /usr/bin/paimon-launcher > /dev/null 2>&1
+sudo rm /usr/share/pixmaps/paimon-launcher.png > /dev/null 2>&1
+rm $HOME/.local/share/applications/paimon-launcher.desktop > /dev/null 2>&1
 # ---------------------------------
 
 
 
-if [ ! -f /usr/bin/osu.AppImage ]; then
+if [ ! -f /usr/bin/paimon-launcher ]; then
 echo
 
 
