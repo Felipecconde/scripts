@@ -1,7 +1,7 @@
 # https://github.com/Felipecconde/iDeb
 cd $HOME
 sudo apt install git
-rm -rf /home/$USER/Downloads/ideb
+rm -rf /home/$USER/Downloads/iDeb
 git clone https://github.com/Felipecconde/iDeb /home/$USER/Downloads/iDeb
 cat $HOME/Downloads/ideb/'Ajuda\Help.txt'
 echo
@@ -9,4 +9,4 @@ echo '- [!] Read the message above (Portuguese and English) before installing it
 sleep 5
 cd $HOME/Downloads/ideb/
 bash $HOME/Downloads/ideb/'.install'
-rm -rf /home/$USER/Downloads/ideb
+rm -rf /home/$USER/Downloads/iDeb
