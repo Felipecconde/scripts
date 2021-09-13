@@ -35,17 +35,16 @@ echo
 DRIVEID=$(curl -s https://notabug.org/loentar/paimon-launcher/releases | grep -Po '(?<=href="https://drive.google.com/file/d/)[^/]*' | head -n 1)
 rm $HOME/Downloads/paimon-launcher > /dev/null 2>&1
 sudo rm /usr/bin/paimon-launcher > /dev/null 2>&1
-wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=$DRIVEID' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=$DRIVEID" -O paimon-launcher > /dev/null 2>&1
+sudo wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=$DRIVEID' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=$DRIVEID" -O /usr/bin/paimon-launcher > /dev/null 2>&1
 rm -rf /tmp/cookies.txt > /dev/null 2>&1
-chmod +x $HOME/Downloads/paimon-launcher > /dev/null 2>&1
-sudo mv $HOME/Downloads/paimon-launcher /usr/bin/paimon-launcher > /dev/null 2>&1
+sudo chmod +x /usr/bin/paimon-launcher > /dev/null 2>&1
 sudo rm /usr/share/pixmaps/paimon-launcher.png > /dev/null 2>&1
-sudo wget -O /usr/share/pixmaps/paimon-launcher.png https://i.imgur.com/sjOjGPp.png > /dev/null 2>&1
+sudo wget -O /usr/share/pixmaps/paimon-launcher.png https://i.imgur.com/SHZoAIc.png > /dev/null 2>&1
 rm $HOME/.local/share/applications/paimon-launcher.desktop > /dev/null 2>&1
 cat > $HOME/.local/share/applications/paimon-launcher.desktop <<EOF
 [Desktop Entry]
 Type=Application
-Name=Genshin Impact Launcher
+Name=Genshin Impact
 Icon=/usr/share/pixmaps/paimon-launcher.png
 Exec=/usr/bin/paimon-launcher
 Categories=Game;
@@ -92,7 +91,6 @@ echo '[UNINSTALL] 🗑️  BRAppStore: Uninstalling package "Genshin Impact"... 
 
 
 # ---------- Uninstall ------------
-rm $HOME/Downloads/paimon-launcher > /dev/null 2>&1
 sudo rm /usr/bin/paimon-launcher > /dev/null 2>&1
 sudo rm /usr/share/pixmaps/paimon-launcher.png > /dev/null 2>&1
 rm $HOME/.local/share/applications/paimon-launcher.desktop > /dev/null 2>&1
