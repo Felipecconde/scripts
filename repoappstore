@@ -2,6 +2,7 @@ echo "BRAppStore Repository > Starting listing..."
 echo "(To run some script listed here, just type "br" + BRID)"
 echo
 echo "-------------------- REPOSITORY --------------------"
+echo
 echo "BRID: appstore | Name: BRAppStore | Category: Other | Author: BashRun | Description: Oficial Felipecconde's repository for BashRun scripts. Focused but not limited in apps and games installation scripts."
 echo
 echo "BRID: uninstall; remove; bruninstall; | Name: BashRun Uninstaller | Category: Other | Author: BashRun | Description: Official uninstaller for BashRun."
