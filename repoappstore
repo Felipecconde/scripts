@@ -9,6 +9,6 @@ echo "BRID: uninstall; remove; bruninstall; | Name: BashRun Uninstaller | Catego
 echo
 echo "BRID: bashrun | Name: BashRun Updater | Category: Other | Author: BashRun | Description: Official updater for BashRun."
 echo
-echo "BRID: osulazer | Name: osu"'!'"lazer | Category: Game | Author: BRAppStore | Description: Installer for official peppy's osu!lazer Linux package from GitHub. Desktop entry and third party auto-update system included on this script. Enjoy :)"
+echo "BRID: osulazer | Name: osu"'!'"lazer | Category: Game | Author: BRAppStore | Description: Installer for official peppy's osu"'!'"lazer Linux package from GitHub. Desktop entry and third party auto-update system included on this script. Enjoy :)"
 echo
 echo "BRID: genshinimpact | Name: Genshin Impact | Category: Game | Author: BRAppStore | Description: Installer for loentar's Paimon Launcher package from NotABug, that are a GUI for Genshin Impact installer and for Krock's patch installer."
