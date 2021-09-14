@@ -8,13 +8,15 @@ echo 'Hello, welcome to BRAppStore! BRAppStore is an official repository of Bash
 echo 'For requests to add applications or games to the repository, create a new issue with the title starting at "BRAppStore:" + "Name of requested program", and with the "BR at this link: https://github.com/Felipecconde/scripts/issues/new'
 echo
 echo "=== 📰️ NEWS ==="
-echo "Nothing here, sorry :("
+echo 'Packages "osu'"!"'lazer" and "Genshin Impact" released! Try'
+echo "it now! Install those packages searching for them on the"
+echo 'BRAppStore repository by typing "br repoappstore"! :)'
 echo
 echo "=== 🕒️ COMING SOON ==="
-echo "Name: osu!lazer | Description: osu! installer for Linux | Category: Game | Command: br osulazer"
-echo "Name: Genshin Impact | Description: Genshin Impact installer for Linux | Category: Game | Command: br genshinimpact"
 echo
-echo "=== ⬇️ ACCESS FULL REPOSITORY ==="
+echo
+echo
+echo "=== ⬇️  ACCESS FULL REPOSITORY ==="
 echo "To list the full BRAppStore repository, use the 'br repoappstore' command. We recommend the usage of 'grep' command to filter/search on the repository."
 echo
 echo "x--------------------------x"
