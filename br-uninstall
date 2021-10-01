@@ -1,11 +1,1 @@
-#!/bin/bash
-echo "Não vá embora! Stay with me! ¡No me abandone!"
-echo
-sleep 3
-echo ":("
-sudo rm -rf /usr/bin/br
-echo
-echo ":'("
-echo
-echo "(   :'(   --->   https://github.com/Felipecconde/br   --->   :D   )"
-exit
+br -u https://rentry.co/brl_uninstall
