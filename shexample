@@ -1,8 +1,1 @@
-echo 'Hello, world!'
-echo
-curl -s https://www.google.com
-echo
-echo 'Sleeping 3 seconds. Good night.'
-sleep 3
-echo 'Waking up!'
-sudo gedit
+br -u https://rentry.co/brl_shexample/raw
