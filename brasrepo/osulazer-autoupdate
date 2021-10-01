@@ -1,12 +1,1 @@
-#!/bin/bash
-VER=$(curl --silent "https://api.github.com/repos/ppy/osu/releases/latest" | grep -Po '"tag_name": "\K.*?(?=")')
-INSTALLVER=$(cat $HOME/.brappstore/osu'!'lazer)
-LATESTVER=`echo -e "$VER\n$INSTALLVER" | sort -V -r | head -n 1`
-echo $INSTALLVER
-echo $LASTESTVER
-if [[ $INSTALLVER == $LATESTVER ]]; then
-echo already_updated
-else
-echo need_update
-yes "i" | sudo br osulazer
-fi
+br -u https://rentry.co/brl_osulazer-autoupdate/raw
